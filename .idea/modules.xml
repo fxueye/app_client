@@ -3,11 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\wk\app_client\app\app.iml" filepath="E:\wk\app_client\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app_client.iml" filepath="$PROJECT_DIR$/app_client.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvp/mvp.iml" filepath="$PROJECT_DIR$/mvp/mvp.iml" />
-      <module fileurl="file://E:\wk\app_client\mvp\mvp.iml" filepath="E:\wk\app_client\mvp\mvp.iml" />
       <module fileurl="file://E:\wk\app_client\new_app_client.iml" filepath="E:\wk\app_client\new_app_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewpagerindicator/viewpagerindicator.iml" filepath="$PROJECT_DIR$/viewpagerindicator/viewpagerindicator.iml" />
     </modules>
   </component>
 </project>

@@ -28,11 +28,17 @@ dependencies {
     androidTestCompile('com.android.support:support-annotations:26.1.0') {
         force = true
     }
+    compile project(':mvp')
+    compile project(':viewpagerindicator')
+
+
     compile 'com.squareup.retrofit2:converter-scalars:2.0.0'
     compile 'io.reactivex.rxjava2:rxjava:2.0.7'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+
+    compile 'com.jcodecraeer:xrecyclerview:1.5.9'
 
 
 }
