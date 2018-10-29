@@ -1,4 +1,4 @@
-package com.zhangebaoge.viewpagerindicator;
+package com.zhaobaoge.viewpagerindicator;
 
 public interface IconPagerAdapter {
     /**

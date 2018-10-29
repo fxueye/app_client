@@ -1,10 +1,11 @@
-package com.zhaobaoge.buy;
+package com.zhaobaoge.buy.sample;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.zhaobaoge.viewpagerindicator.IconPagerAdapter;
+import com.zhaobaoge.buy.R;
 
 
 class TestFragmentAdapter extends FragmentPagerAdapter implements IconPagerAdapter {

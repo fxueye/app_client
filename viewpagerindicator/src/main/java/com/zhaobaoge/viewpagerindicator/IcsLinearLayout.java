@@ -1,4 +1,4 @@
-package com.zhangebaoge.viewpagerindicator;
+package com.zhaobaoge.viewpagerindicator;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -104,7 +104,7 @@ class IcsLinearLayout extends LinearLayout {
 
             if (child != null && child.getVisibility() != GONE) {
                 if (hasDividerBeforeChildAt(i)) {
-                    final android.widget.LinearLayout.LayoutParams lp = (android.widget.LinearLayout.LayoutParams) child.getLayoutParams();
+                    final LayoutParams lp = (LayoutParams) child.getLayoutParams();
                     final int top = child.getTop() - lp.topMargin/* - mDividerHeight*/;
                     drawHorizontalDivider(canvas, top);
                 }
@@ -131,7 +131,7 @@ class IcsLinearLayout extends LinearLayout {
 
             if (child != null && child.getVisibility() != GONE) {
                 if (hasDividerBeforeChildAt(i)) {
-                    final android.widget.LinearLayout.LayoutParams lp = (android.widget.LinearLayout.LayoutParams) child.getLayoutParams();
+                    final LayoutParams lp = (LayoutParams) child.getLayoutParams();
                     final int left = child.getLeft() - lp.leftMargin/* - mDividerWidth*/;
                     drawVerticalDivider(canvas, left);
                 }
