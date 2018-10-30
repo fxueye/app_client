@@ -16,13 +16,13 @@
         android:layout_height="1px"
         android:background="#888" />
 
-    <com.zhaobaoge.widget.TabsIndicator
+    <com.zhaobaoge.widget.tab.TabsIndicator
         android:id="@+id/alphaIndicator"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:orientation="horizontal">
 
-        <com.zhaobaoge.widget.TabView
+        <com.zhaobaoge.widget.tab.TabView
             app:tabIconNormal="@mipmap/home_normal"
             app:tabIconSelected="@mipmap/home_selected"
             app:tabText="微信"
@@ -34,7 +34,18 @@
             android:layout_weight="1"
             android:padding="5dp" />
 
-        <com.zhaobaoge.widget.TabView
+        <com.zhaobaoge.widget.tab.TabView
+            app:tabIconNormal="@mipmap/category_normal"
+            app:tabIconSelected="@mipmap/category_selected"
+            app:tabText="通讯录"
+            app:tabTextSize="13sp"
+            app:textColorNormal="#999999"
+            app:textColorSelected="#46c01b"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp" />
+        <com.zhaobaoge.widget.tab.TabView
             app:tabIconNormal="@mipmap/category_normal"
             app:tabIconSelected="@mipmap/category_selected"
             app:tabText="通讯录"
@@ -46,7 +57,7 @@
             android:layout_weight="1"
             android:padding="5dp" />
 
-        <com.zhaobaoge.widget.TabView
+        <com.zhaobaoge.widget.tab.TabView
             app:tabIconNormal="@mipmap/service_normal"
             app:tabIconSelected="@mipmap/service_selected"
             app:tabText="发现"
@@ -59,7 +70,7 @@
             android:padding="5dp" />
 
 
-        <com.zhaobaoge.widget.TabView
+        <com.zhaobaoge.widget.tab.TabView
             app:tabIconNormal="@mipmap/mine_normal"
             app:tabIconSelected="@mipmap/mine_selected"
             app:tabText="我"
@@ -70,5 +81,5 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="5dp" />
-    </com.zhaobaoge.widget.TabsIndicator>
+    </com.zhaobaoge.widget.tab.TabsIndicator>
 </LinearLayout>

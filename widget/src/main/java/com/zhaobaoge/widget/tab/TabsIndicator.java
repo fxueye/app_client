@@ -1,4 +1,4 @@
-package com.zhaobaoge.widget;
+package com.zhaobaoge.widget.tab;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,6 +13,9 @@ import java.util.List;
 
 
 public class TabsIndicator extends LinearLayout {
+    public interface OnTabChangedListner {
+        void onTabSelected(int tabNum);
+    }
 
     private ViewPager mViewPager;
     private OnTabChangedListner mListner;

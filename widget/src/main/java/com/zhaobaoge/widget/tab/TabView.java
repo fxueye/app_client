@@ -1,4 +1,4 @@
-package com.zhaobaoge.widget;
+package com.zhaobaoge.widget.tab;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -15,7 +15,7 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 
-import com.zhangebaoge.widget.R;
+import com.zhaobaoge.widget.R;
 
 public class TabView extends View {
 
