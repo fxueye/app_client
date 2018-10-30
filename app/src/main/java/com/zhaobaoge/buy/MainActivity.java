@@ -1,11 +1,9 @@
 package com.zhaobaoge.buy;
 
-import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 
-import com.zhaobaoge.buy.sample.ListSamples;
 import com.zhaobaoge.mvp.presenter.ActivityPresenter;
 
 import io.reactivex.Observer;
@@ -69,7 +67,7 @@ public class MainActivity extends ActivityPresenter<MainDelegate> implements OnC
                         }
                     });
         }else if(view.getId() == viewDelegate.get(R.id.button).getId()){
-            startActivity(new Intent(this, ListSamples.class));
+
         }
 
     }

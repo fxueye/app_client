@@ -9,13 +9,6 @@ import com.zhaobaoge.mvp.view.AppDelegate;
  */
 
 public class MainDelegate extends AppDelegate {
-    private static final String[] CONTENT = new String[] { "Calendar", "Camera", "Alarms", "Location" };
-    private static final int[] ICONS = new int[] {
-            R.drawable.perm_group_calendar,
-            R.drawable.perm_group_camera,
-            R.drawable.perm_group_device_alarms,
-            R.drawable.perm_group_location,
-    };
 
     @Override
     public int getRootLayoutId() {

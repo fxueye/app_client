@@ -29,7 +29,7 @@ dependencies {
         force = true
     }
     compile project(':mvp')
-    compile project(':viewpagerindicator')
+//    compile project(':viewpagerindicator')
 
 
     compile 'com.squareup.retrofit2:converter-scalars:2.0.0'
