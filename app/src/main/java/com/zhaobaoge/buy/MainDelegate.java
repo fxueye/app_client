@@ -17,14 +17,8 @@ public class MainDelegate extends AppDelegate {
     @Override
     public void initWidget(){
         super.initWidget();
-        TextView textView = get(R.id.tv);
-        textView.setText("测试");
 
     }
 
-    public  void setText( String text){
-        TextView textView = get(R.id.tv);
-        textView.setText(text);
-    }
 
 }

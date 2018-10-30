@@ -1,27 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.zhaobaoge.buy.MainActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#888" />
+
+    <com.zhaobaoge.widget.TabsIndicator
+        android:id="@+id/alphaIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+        <com.zhaobaoge.widget.TabView
+            app:tabIconNormal="@mipmap/home_normal"
+            app:tabIconSelected="@mipmap/home_selected"
+            app:tabText="微信"
+            app:tabTextSize="13sp"
+            app:textColorNormal="#999999"
+            app:textColorSelected="#46c01b"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp" />
+
+        <com.zhaobaoge.widget.TabView
+            app:tabIconNormal="@mipmap/category_normal"
+            app:tabIconSelected="@mipmap/category_selected"
+            app:tabText="通讯录"
+            app:tabTextSize="13sp"
+            app:textColorNormal="#999999"
+            app:textColorSelected="#46c01b"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp" />
+
+        <com.zhaobaoge.widget.TabView
+            app:tabIconNormal="@mipmap/service_normal"
+            app:tabIconSelected="@mipmap/service_selected"
+            app:tabText="发现"
+            app:tabTextSize="13sp"
+            app:textColorNormal="#999999"
+            app:textColorSelected="#46c01b"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp" />
 
 
+        <com.zhaobaoge.widget.TabView
+            app:tabIconNormal="@mipmap/mine_normal"
+            app:tabIconSelected="@mipmap/mine_selected"
+            app:tabText="我"
+            app:tabTextSize="13sp"
+            app:textColorNormal="#999999"
+            app:textColorSelected="#46c01b"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp" />
+    </com.zhaobaoge.widget.TabsIndicator>
 </LinearLayout>

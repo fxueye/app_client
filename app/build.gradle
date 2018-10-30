@@ -29,6 +29,7 @@ dependencies {
         force = true
     }
     compile project(':mvp')
+    compile project(':widget')
 //    compile project(':viewpagerindicator')
 
 
