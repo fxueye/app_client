@@ -1,7 +1,5 @@
 package com.zhaobaoge.buy;
 
-import android.widget.TextView;
-
 import com.zhaobaoge.mvp.view.AppDelegate;
 
 /**
@@ -12,7 +10,7 @@ public class MainDelegate extends AppDelegate {
 
     @Override
     public int getRootLayoutId() {
-        return R.layout.activity_main;
+        return R.layout.activity_index;
     }
     @Override
     public void initWidget(){

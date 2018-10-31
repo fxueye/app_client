@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/vp_main"
+        android:id="@+id/index_viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
@@ -17,7 +17,7 @@
         android:background="#888" />
 
     <com.zhaobaoge.widget.tab.TabsIndicator
-        android:id="@+id/alphaIndicator"
+        android:id="@+id/index_tabsIndicator"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:orientation="horizontal">
