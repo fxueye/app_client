@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="layout_login_title" type="id"/>
+    <item name="linear_logo_base" type="id" />
+    <item name="img_app_icon" type="id" />
+    <item name="linear_us_phone" type="id" />
+    <item name="view_phone_line" type="id" />
+    <item name="tv_phone_error" type="id" />
+    <item name="linear_us_verification_code" type="id" />
+    <item name="linear_login_get_code" type="id" />
+    <item name="tv_get_code" type="id" />
+    <item name="view_code_line" type="id" />
+    <item name="tv_code_error" type="id" />
+    <item name="linear_us_pass" type="id" />
+    <item name="tg_login_pass_visible" type="id" />
+    <item name="view_pass_line" type="id" />
+    <item name="tv_pass_error" type="id" />
+    <item name="tv_login_commit" type="id" />
+    <item name="linear_login_link_to_register" type="id" />
+    <item name="linear_login_switch_base" type="id" />
+    <item name="tv_login_type_switch" type="id" />
+    <item name="view_login_bottom_cut" type="id" />
+    <item name="tv_login_forget" type="id" />
+    <item name="view_title_cut_line" type="id" />
+    <item name="linear_left_back" type="id" />
+    <item name="image_left_back" type="id" />
+    <item name="tv_top_title" type="id" />
+</resources>
