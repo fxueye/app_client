@@ -5,15 +5,14 @@ package com.zhaobaoge.widget;
  */
 
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import android.support.v7.widget.AppCompatEditText;
 
 
 public class CleanableEditText extends AppCompatEditText {

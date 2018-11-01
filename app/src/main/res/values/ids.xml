@@ -26,4 +26,7 @@
     <item name="linear_left_back" type="id" />
     <item name="image_left_back" type="id" />
     <item name="tv_top_title" type="id" />
+    <item name="edt_login_phone_num" type="id" />
+    <item name="edt_login_verification_code" type="id" />
+    <item name="edt_login_pass" type="id" />
 </resources>

@@ -70,7 +70,7 @@
                             android:layout_gravity="center"
                             android:src="@drawable/icon_user_phone" />
 
-                        <com.zhaobaoge.tdd.ui.widget.CleanableEditText
+                        <com.zhaobaoge.widget.CleanableEditText
                             android:id="@id/edt_login_phone_num"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
                             android:layout_gravity="center"
                             android:src="@drawable/icon_user_code" />
 
-                        <com.zhaobaoge.tdd.ui.widget.CleanableEditText
+                        <com.zhaobaoge.widget.CleanableEditText
                             android:id="@id/edt_login_verification_code"
                             android:layout_width="0.0dip"
                             android:layout_height="wrap_content"
@@ -212,7 +212,7 @@
                             android:layout_gravity="center"
                             android:src="@drawable/icon_user_pass" />
 
-                        <com.zhaobaoge.tdd.ui.widget.CleanableEditText
+                        <com.zhaobaoge.widget.CleanableEditText
                             android:id="@id/edt_login_pass"
                             android:layout_width="0.0dip"
                             android:layout_height="wrap_content"
