@@ -14,7 +14,7 @@ import com.zhaobaoge.mvp.presenter.FragmentPresenter;
 public class CenterFragment extends FragmentPresenter<CenterDelegate> implements View.OnClickListener {
     @Override
     protected void bindEvenListener() {
-        viewDelegate.setOnClickListener(this, R.id.button);
+        viewDelegate.setOnClickListener(this, R.id.btnCenter);
     }
 
     @Override
@@ -25,7 +25,7 @@ public class CenterFragment extends FragmentPresenter<CenterDelegate> implements
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.button:
+            case R.id.btnCenter:
                 startActivity(new Intent(getActivity(), LoginActivity.class));
                 break;
         }

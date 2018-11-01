@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <item name="layout_login_title" type="id"/>
+    <item name="layout_login_title" type="id" />
     <item name="linear_logo_base" type="id" />
     <item name="img_app_icon" type="id" />
     <item name="linear_us_phone" type="id" />
@@ -29,4 +29,5 @@
     <item name="edt_login_phone_num" type="id" />
     <item name="edt_login_verification_code" type="id" />
     <item name="edt_login_pass" type="id" />
+    <item name="btnCenter" type="id" />
 </resources>
