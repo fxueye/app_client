@@ -31,4 +31,21 @@
     <item name="edt_login_pass" type="id" />
     <item name="btnCenter" type="id" />
     <item name="index_tabsIndicator" type="id" />
+    <item name="layout_register_title" type="id" />
+    <item name="linear_register_get_code" type="id" />
+    <item name="tv_register_get_code" type="id" />
+    <item name="tg_register_pass_visible" type="id" />
+    <item name="tv_register_commit" type="id" />
+    <item name="tv_register_link_to_agreement" type="id" />
+    <item name="linear_register_link_to_login" type="id" />
+    <item name="edt_register_pass" type="id" />
+    <item name="edt_register_verification_code" type="id" />
+    <item name="edt_register_phone_num" type="id" />
+    <item name="linear_pass_get_code" type="id" />
+    <item name="tv_pass_get_code" type="id" />
+    <item name="tg_pass_pass_visible" type="id" />
+    <item name="tv_pass_commit" type="id" />
+    <item name="edt_pass_phone_num" type="id" />
+    <item name="edt_pass_verification_code" type="id" />
+    <item name="edt_pass_pass" type="id" />
 </resources>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">new_app_client</string>
+    <string name="register">注册</string>
+    <string name="login">登录</string>
+    <string name="code_login">验证码登录</string>
+    <string name="pass_login">密码登录</string>
+    <string name="find_pass">找回密码</string>
 </resources>

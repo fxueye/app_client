@@ -1,8 +1,11 @@
 package com.zhaobaoge.buy.ui.user.login;
 
+import android.content.Intent;
 import android.view.View;
 
 import com.zhaobaoge.buy.R;
+import com.zhaobaoge.buy.ui.user.pass.PasssAcitivity;
+import com.zhaobaoge.buy.ui.user.register.RegisterActivity;
 import com.zhaobaoge.mvp.presenter.ActivityPresenter;
 
 /**
@@ -35,7 +38,12 @@ public class LoginActivity extends ActivityPresenter<LoginDelegate> implements V
                 viewDelegate.Switch();
                 break;
             case R.id.tv_login_forget:
-
+                finish();
+                startActivity(new Intent(this, PasssAcitivity.class));
+                break;
+            case R.id.linear_login_link_to_register:
+                finish();
+                startActivity(new Intent(this, RegisterActivity.class));
                 break;
         }
     }

@@ -7,7 +7,7 @@
 
     <include
         android:id="@id/layout_login_title"
-        layout="@layout/layout_title_personal_login"
+        layout="@layout/layout_base_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true" />

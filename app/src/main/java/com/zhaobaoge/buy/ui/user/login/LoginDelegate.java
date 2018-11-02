@@ -37,6 +37,8 @@ public class LoginDelegate extends AppDelegate {
 
     @Override
     public void initWidget() {
+        TextView textView = get(R.id.tv_top_title);
+        textView.setText(R.string.login);
         tvLoginSwitch = get(R.id.tv_login_type_switch);
         tvForgetPass = get(R.id.tv_login_forget);
         tvPhoneError = get(R.id.tv_phone_error);
@@ -73,7 +75,7 @@ public class LoginDelegate extends AppDelegate {
 
     public void UsPass() {
         isPhone = false;
-        tvLoginSwitch.setText("验证码登录");
+        tvLoginSwitch.setText(R.string.code_login);
         tvLoginSwitch.setVisibility(View.VISIBLE);
         tvForgetPass.setVisibility(View.VISIBLE);
         linearPass.setVisibility(View.VISIBLE);
@@ -82,7 +84,7 @@ public class LoginDelegate extends AppDelegate {
 
     public void UsPhone() {
         isPhone = true;
-        tvLoginSwitch.setText("密码登录");
+        tvLoginSwitch.setText(R.string.pass_login);
         tvLoginSwitch.setVisibility(View.VISIBLE);
         tvForgetPass.setVisibility(View.GONE);
         linearPass.setVisibility(View.GONE);
