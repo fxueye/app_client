@@ -30,4 +30,5 @@
     <item name="edt_login_verification_code" type="id" />
     <item name="edt_login_pass" type="id" />
     <item name="btnCenter" type="id" />
+    <item name="index_tabsIndicator" type="id" />
 </resources>

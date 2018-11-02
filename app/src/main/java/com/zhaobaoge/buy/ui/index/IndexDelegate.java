@@ -41,7 +41,16 @@ public class IndexDelegate extends AppDelegate {
         HomeAdapter homeAdapter = new HomeAdapter(activity.getSupportFragmentManager(), fragments);
         mViewPager = get(R.id.index_viewPager);
         mViewPager.setAdapter(homeAdapter);
+        mViewPager.setOffscreenPageLimit(fragments.size());
         mTabsIndicator.setViewPager(mViewPager);
+//        mTabsIndicator.setOnTabChangedListner(new TabsIndicator.OnTabChangedListner() {
+//            @Override
+//            public void onTabSelected(int tabNum) {
+//                if (tabNum == 2) {
+//                    getActivity().startActivity(new Intent(getActivity(), LoginActivity.class));
+//                }
+//            }
+//        });
     }
 
     private class HomeAdapter extends FragmentPagerAdapter {

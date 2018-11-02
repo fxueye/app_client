@@ -2,9 +2,12 @@ package com.zhaobaoge.buy.ui.user.login;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import com.zhaobaoge.buy.R;
 import com.zhaobaoge.buy.utils.RegexUtils;
@@ -23,7 +26,9 @@ public class LoginDelegate extends AppDelegate {
     private LinearLayout linearPass,
             linearPhone,
             linearCode;
-    private CleanableEditText edtPhoneNum;
+    private CleanableEditText edtPhoneNum, edtPass;
+    private ToggleButton tgLoginPassVisible;
+
 
     @Override
     public int getRootLayoutId() {
@@ -43,6 +48,19 @@ public class LoginDelegate extends AppDelegate {
 
         edtPhoneNum = get(R.id.edt_login_phone_num);
         edtPhoneNum.addTextChangedListener(new TextWatcherImpl());
+        edtPass = get(R.id.edt_login_pass);
+
+        tgLoginPassVisible = get(R.id.tg_login_pass_visible);
+        tgLoginPassVisible.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (tgLoginPassVisible.isChecked()) {
+                    edtPass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                } else {
+                    edtPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
 
     }
 

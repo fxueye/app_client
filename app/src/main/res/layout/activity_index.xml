@@ -17,7 +17,7 @@
         android:background="#888" />
 
     <com.zhaobaoge.widget.tab.TabsIndicator
-        android:id="@+id/index_tabsIndicator"
+        android:id="@id/index_tabsIndicator"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:orientation="horizontal">

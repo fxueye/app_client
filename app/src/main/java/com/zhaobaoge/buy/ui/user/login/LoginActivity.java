@@ -16,8 +16,10 @@ public class LoginActivity extends ActivityPresenter<LoginDelegate> implements V
         viewDelegate.setOnClickListener(this,
                 R.id.linear_left_back,
                 R.id.tv_login_type_switch,
-                R.id.tv_login_forget);
+                R.id.tv_login_forget,
+                R.id.linear_login_link_to_register);
     }
+
     @Override
     protected Class<LoginDelegate> getDelegateClass() {
         return LoginDelegate.class;
@@ -25,7 +27,7 @@ public class LoginActivity extends ActivityPresenter<LoginDelegate> implements V
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.linear_left_back:
                 finish();
                 break;
