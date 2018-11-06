@@ -1,10 +1,8 @@
 package com.zhaobaoge.buy.ui.center;
 
-import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
-import com.zhaobaoge.buy.MainDelegate;
 import com.zhaobaoge.buy.R;
 import com.zhaobaoge.mvp.view.AppDelegate;
 import com.zhaobaoge.widget.NotifyingScrollView;

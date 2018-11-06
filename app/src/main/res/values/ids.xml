@@ -82,4 +82,7 @@
     <item name="linear_personal_title_base" type="id" />
     <item name="linear_personal_to_setting" type="id" />
     <item name="linear_personal_favorite" type="id" />
+    <item name="viewPager" type="id" />
+    <item name="psts_tabs" type="id" />
+    <item name="vp_center" type="id" />
 </resources>

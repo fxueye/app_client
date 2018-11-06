@@ -11,4 +11,68 @@
         <attr name="badgeBackgroundColor" format="color" />
         <attr name="paddingTexwithIcon" format="dimension"/>
     </declare-styleable>
+
+
+    <!--圆形指示器-->
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_normalRadius" format="dimension"/>
+        <attr name="ci_normalRadiusColor" format="color"/>
+        <attr name="ci_selectedRadius" format="dimension"/>
+        <attr name="ci_selectedRadiusColor" format="color"/>
+        <attr name="ci_dotPadding" format="dimension"/>
+        <attr name="ci_isStroke" format="boolean"/>
+        <attr name="ci_normalStrokeWidth" format="dimension"/>
+        <attr name="ci_isBlink" format="boolean"/>
+    </declare-styleable>
+
+    <!--Tab指示器-->
+    <declare-styleable name="TabTitleIndicator">
+        <attr name="tti_indicatorHeight" format="dimension"/>
+        <attr name="tti_indicatorColor" format="color"/>
+        <attr name="tti_underlineHeight" format="dimension"/>
+        <attr name="tti_underlineColor" format="color"/>
+        <attr name="tti_dividerWidth" format="dimension"/>
+        <attr name="tti_dividerPaddingTopBottom" format="dimension"/>
+        <attr name="tti_dividerColor" format="color"/>
+        <attr name="tti_triangleHeight" format="dimension"/>
+        <attr name="tti_tabPaddingLeftRight" format="dimension"/>
+        <attr name="tti_tabTextSizeNormal" format="dimension"/>
+        <attr name="tti_tabTextSizeSelected" format="dimension"/>
+        <attr name="tti_tabTextColorNormal" format="color"/>
+        <attr name="tti_tabTextColorSelected" format="color"/>
+        <attr name="tti_tabBackground" format="reference"/>
+        <attr name="tti_visibleCount" format="integer"/>
+        <attr name="tti_scrollOffset" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color"/>
+        <attr name="pstsUnderlineColor" format="color"/>
+        <attr name="pstsDividerColor" format="color"/>
+        <attr name="pstsIndicatorHeight" format="dimension"/>
+        <attr name="pstsUnderlineHeight" format="dimension"/>
+        <attr name="pstsDividerPadding" format="dimension"/>
+        <attr name="pstsTabPaddingLeftRight" format="dimension"/>
+        <attr name="pstsScrollOffset" format="dimension"/>
+        <attr name="pstsTabBackground" format="reference"/>
+        <attr name="pstsShouldExpand" format="boolean"/>
+        <attr name="pstsTextAllCaps" format="boolean"/>
+    </declare-styleable>
+
+    <!--圆形图片-->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_BorderWidth" format="dimension"/>
+        <attr name="civ_BorderColor" format="color"/>
+        <attr name="civ_FillColor" format="color"/>
+        <attr name="civ_BorderOverlay" format="boolean"/>
+    </declare-styleable>
+
+
+
+    <!--循环滑动的ViewPager-->
+    <declare-styleable name="LoopViewPager">
+        <attr name="lvp_isAutoLoop" format="boolean"/>
+        <attr name="lvp_delayTime" format="integer"/>
+    </declare-styleable>
+
 </resources>
