@@ -75,4 +75,17 @@
         <attr name="lvp_delayTime" format="integer"/>
     </declare-styleable>
 
+    <declare-styleable name="VerticalTabLayout">
+        <attr name="vtlIndicatorColor" format="color"/>
+        <attr name="vtlUnderlineColor" format="color"/>
+        <attr name="vtlDividerColor" format="color"/>
+        <attr name="vtlIndicatorHeight" format="dimension"/>
+        <attr name="vtlUnderlineHeight" format="dimension"/>
+        <attr name="vtlDividerPadding" format="dimension"/>
+        <attr name="vtlTabPaddingLeftRight" format="dimension"/>
+        <attr name="vtlScrollOffset" format="dimension"/>
+        <attr name="vtlTabBackground" format="reference"/>
+        <attr name="vtlShouldExpand" format="boolean"/>
+        <attr name="vtlTextAllCaps" format="boolean"/>
+    </declare-styleable>
 </resources>

@@ -12,6 +12,7 @@ import com.zhaobaoge.buy.R;
 import com.zhaobaoge.buy.TextFragment;
 import com.zhaobaoge.mvp.view.AppDelegate;
 import com.zhaobaoge.widget.tab.PagerSlidingTabStrip;
+import com.zhaobaoge.widget.tab.VerticalTabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,7 @@ public class SortDelegate extends AppDelegate {
         fragments.add(TextFragment.newInstance("3"));
         fragments.add(TextFragment.newInstance("4"));
         fragments.add(TextFragment.newInstance("5"));
-        PagerSlidingTabStrip tabs =  get(R.id.psts_tabs);
+        VerticalTabLayout tabs =  get(R.id.psts_tabs);
         ViewPager viewPager =  get(R.id.vp_center);
         AppCompatActivity activity = getActivity();
         viewPager.setAdapter(new ContentAdapter(activity.getSupportFragmentManager()));

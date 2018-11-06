@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <com.zhaobaoge.widget.tab.PagerSlidingTabStrip
+    <com.zhaobaoge.widget.tab.VerticalTabLayout
         android:id="@id/psts_tabs"
         android:layout_width="match_parent"
         android:layout_height="40dp"
