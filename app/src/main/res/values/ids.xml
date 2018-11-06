@@ -48,4 +48,38 @@
     <item name="edt_pass_phone_num" type="id" />
     <item name="edt_pass_verification_code" type="id" />
     <item name="edt_pass_pass" type="id" />
+    <item name="linear_personal_foot" type="id" />
+    <item name="linear_personal_suggestion" type="id" />
+    <item name="textView" type="id" />
+    <item name="linear_personal_service" type="id" />
+    <item name="linear_personal_clear_cache" type="id" />
+    <item name="tv_personal_cache_size" type="id" />
+    <item name="linear_personal_share" type="id" />
+    <item name="linear_personal_update_old" type="id" />
+    <item name="linear_version_name_old" type="id" />
+    <item name="tv_personal_version_name_remind_old" type="id" />
+    <item name="tv_personal_version_name_old" type="id" />
+    <item name="tv_personal_version_name_notification_old" type="id" />
+    <item name="linear_personal_update_pro" type="id" />
+    <item name="linear_download_status" type="id" />
+    <item name="tv_personal_app_update_download_status" type="id" />
+    <item name="linear_version_name_pro" type="id" />
+    <item name="tv_personal_version_name_remind_pro" type="id" />
+    <item name="tv_personal_version_name_pro" type="id" />
+    <item name="tv_personal_version_name_notification_pro" type="id" />
+    <item name="linear_personal_about_us" type="id" />
+    <item name="linear_personal_module_user" type="id" />
+    <item name="img_personal_user_logo" type="id" />
+    <item name="tv_personal_login_register" type="id" />
+    <item name="tv_personal_user_name" type="id" />
+    <item name="linear_personal_save_money_base" type="id" />
+    <item name="tv_personal_save_money_value" type="id" />
+    <item name="linear_to_my_order" type="id" />
+    <item name="linear_to_my_car" type="id" />
+    <item name="linear_personal_help" type="id" />
+    <item name="imageView3" type="id" />
+    <item name="scroll_personal" type="id" />
+    <item name="linear_personal_title_base" type="id" />
+    <item name="linear_personal_to_setting" type="id" />
+    <item name="linear_personal_favorite" type="id" />
 </resources>

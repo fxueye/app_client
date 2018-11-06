@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8.0dip"
+    android:layout_marginTop="8.0dip"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@id/linear_personal_favorite"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:paddingLeft="15.0dip">
+
+        <ImageView
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/wode_icon_like" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6.0dip"
+            android:text="我的收藏"
+            android:textColor="@color/color_title"
+            android:textSize="14.0sp" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="13.0dip"
+            android:layout_gravity="center"
+            android:layout_marginRight="15.0dip"
+            android:src="@drawable/icon_personal_right_arrow_new" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/linear_personal_foot"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:paddingLeft="15.0dip">
+
+        <ImageView
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/wode_icon_history" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6.0dip"
+            android:text="@string/personal_setting_btn_1"
+            android:textColor="@color/color_title"
+            android:textSize="14.0sp" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="13.0dip"
+            android:layout_gravity="center"
+            android:layout_marginRight="15.0dip"
+            android:src="@drawable/icon_personal_right_arrow_new" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/linear_personal_suggestion"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginTop="8.0dip"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:paddingLeft="15.0dip">
+
+        <ImageView
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/wode_icon_feedback" />
+
+        <TextView
+            android:id="@id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6.0dip"
+            android:text="@string/personal_setting_btn_2"
+            android:textColor="@color/color_title"
+            android:textSize="14.0sp" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="13.0dip"
+            android:layout_gravity="center"
+            android:layout_marginRight="15.0dip"
+            android:src="@drawable/icon_personal_right_arrow_new" />>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/linear_personal_service"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:paddingLeft="15.0dip">
+
+        <ImageView
+            android:layout_width="22.0dip"
+            android:layout_height="30.0dip"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/wode_icon_servicer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6.0dip"
+            android:text="@string/personal_setting_btn_3"
+            android:textColor="@color/color_title"
+            android:textSize="14.0sp" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="13.0dip"
+            android:layout_gravity="center"
+            android:layout_marginRight="15.0dip"
+            android:src="@drawable/icon_personal_right_arrow_new" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/linear_personal_help"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:paddingLeft="15.0dip">
+
+        <ImageView
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/wode_icon_help" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6.0dip"
+            android:text="领券帮助"
+            android:textColor="@color/color_title"
+            android:textSize="14.0sp" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="13.0dip"
+            android:layout_gravity="center"
+            android:layout_marginRight="15.0dip"
+            android:src="@drawable/icon_personal_right_arrow_new" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/linear_personal_share"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:paddingLeft="15.0dip"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/wode_icon_share" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6.0dip"
+            android:text="@string/personal_setting_btn_6"
+            android:textColor="@color/color_title"
+            android:textSize="14.0sp" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="13.0dip"
+            android:layout_gravity="center"
+            android:layout_marginRight="15.0dip"
+            android:src="@drawable/icon_personal_right_arrow_new" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/linear_personal_update_old"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:paddingLeft="15.0dip"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/wode_icon_update" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6.0dip"
+            android:text="版本更新"
+            android:textColor="@color/color_title"
+            android:textSize="14.0sp" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+
+        <LinearLayout
+            android:id="@id/linear_version_name_old"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="15.0dip"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@id/tv_personal_version_name_remind_old"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textColor="@color/color_sale_num"
+                android:textSize="11.0sp" />
+
+            <TextView
+                android:id="@id/tv_personal_version_name_old"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="2.0dip"
+                android:text=" "
+                android:textColor="@color/color_sale_num"
+                android:textSize="11.0sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@id/tv_personal_version_name_notification_old"
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip"
+                android:layout_marginBottom="6.0dip"
+                android:background="@drawable/shape_oval_notification_normal"
+                android:gravity="center"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/linear_personal_update_pro"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:paddingLeft="15.0dip">
+
+        <ImageView
+            android:id="@id/imageView3"
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/wode_icon_update" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6.0dip"
+            android:text="@string/personal_setting_btn_7"
+            android:textColor="@color/color_title"
+            android:textSize="14.0sp" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+
+        <LinearLayout
+            android:id="@id/linear_download_status"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="15.0dip"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@id/tv_personal_app_update_download_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在下载..."
+                android:textColor="@color/color_sale_num"
+                android:textSize="11.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/linear_version_name_pro"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="15.0dip"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@id/tv_personal_version_name_remind_pro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textColor="@color/color_sale_num"
+                android:textSize="11.0sp" />
+
+            <TextView
+                android:id="@id/tv_personal_version_name_pro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="2.0dip"
+                android:text=" "
+                android:textColor="@color/color_sale_num"
+                android:textSize="11.0sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@id/tv_personal_version_name_notification_pro"
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip"
+                android:layout_marginBottom="6.0dip"
+                android:background="@drawable/shape_oval_notification_normal"
+                android:gravity="center"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/linear_personal_about_us"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/color_white"
+        android:orientation="horizontal"
+        android:paddingLeft="15.0dip"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:src="@drawable/wode_icon_about" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6.0dip"
+            android:text="@string/personal_setting_btn_4"
+            android:textColor="@color/color_title"
+            android:textSize="14.0sp" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="13.0dip"
+            android:layout_gravity="center"
+            android:layout_marginRight="15.0dip"
+            android:src="@drawable/icon_personal_right_arrow_new" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="10.0dip"
+        android:visibility="visible" />
+</LinearLayout>
