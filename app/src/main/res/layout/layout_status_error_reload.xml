@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/linear_error_reload"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_norm_bac"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@id/image_error_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="150.0dip"
+        android:maxWidth="150.0dip"
+        android:minHeight="100.0dip"
+        android:minWidth="120.0dip"
+        android:src="@drawable/icon_net_error" />
+
+    <TextView
+        android:id="@id/tv_error_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dip"
+        android:text="网络似乎不顺畅~"
+        android:textColor="@color/color_net_error"
+        android:textSize="13.0sp" />
+
+    <Button
+        android:id="@id/btn_error_reload"
+        android:layout_width="100.0dip"
+        android:layout_height="30.0dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="40.0dip"
+        android:background="@drawable/selector_button_theme1"
+        android:gravity="center"
+        android:text="重新加载"
+        android:textColor="@color/selector_button_text_color"
+        android:textSize="14.0sp" />
+</LinearLayout>

@@ -85,4 +85,18 @@
     <item name="viewPager" type="id" />
     <item name="psts_tabs" type="id" />
     <item name="vp_center" type="id" />
+    <item name="vtl_tabs" type="id" />
+    <item name="tab_layout_category_level1" type="id" />
+    <item name="layout_category_title" type="id" />
+    <item name="linear_category_base" type="id" />
+    <item name="linear_title_search_bac" type="id" />
+    <item name="tv_search_keyword" type="id" />
+    <item name="linear_error_reload" type="id" />
+    <item name="image_error_reminder" type="id" />
+    <item name="tv_error_reminder" type="id" />
+    <item name="btn_error_reload" type="id" />
+    <item name="linear_loading" type="id" />
+    <item name="custom_dialog_progress" type="id" />
+    <item name="custom_dialog_progress_message" type="id" />
+    <item name="vertical_viewpager_category_level1" type="id" />
 </resources>

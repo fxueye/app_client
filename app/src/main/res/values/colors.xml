@@ -272,4 +272,5 @@
     <color name="zxing_transparent">#00000000</color>
     <color name="zxing_viewfinder_laser">#ffcc0000</color>
     <color name="zxing_viewfinder_mask">#60000000</color>
+    <color name="selector_button_text_color">#8F8F8F</color>
 </resources>
