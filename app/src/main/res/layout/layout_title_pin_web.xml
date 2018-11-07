@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_norm_title_pin_bac"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:layout_below="@id/status_bar_fix"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@id/linear_pin_web_back"
+            android:layout_width="45.0dip"
+            android:layout_height="45.0dip"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:contentDescription="@null"
+                android:src="@drawable/icon_title_back_white" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@id/tv_pin_web_title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="title"
+                android:textColor="@color/color_white"
+                android:textSize="16.0sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@id/img_pin_web_title"
+                android:layout_width="fill_parent"
+                android:layout_height="24.0dip"
+                android:layout_gravity="center"
+                android:src="@drawable/img_title_pin" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="45.0dip"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <View
+        android:id="@id/view_cut_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/color_divider_ud"
+        android:visibility="gone" />
+</LinearLayout>

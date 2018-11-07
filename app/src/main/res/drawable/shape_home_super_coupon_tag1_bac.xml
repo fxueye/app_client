@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="@color/color_home_pick_super_coupon_tag2_2" android:endColor="@color/color_home_pick_super_coupon_tag2_1" android:angle="0.0" android:centerX="0.6" android:centerY="0.5" />
+    <size android:height="23.0dip" android:width="40.0dip" />
+    <corners android:topLeftRadius="7.0dip" android:topRightRadius="7.0dip" android:bottomLeftRadius="7.0dip" android:bottomRightRadius="7.0dip" />
+    <padding android:left="1.0dip" android:right="1.0dip" />
+</shape>

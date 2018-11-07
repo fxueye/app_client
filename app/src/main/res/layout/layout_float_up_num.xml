@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@id/relative_float_btn"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:background="@drawable/shape_norm_float_btn_bac"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@id/linear_float_btn_num"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:weightSum="2.0">
+
+            <TextView
+                android:id="@id/tv_float_btn_num_current"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.15"
+                android:gravity="bottom|center"
+                android:text="141"
+                android:textColor="@color/color_white"
+                android:textSize="12.0dip" />
+
+            <View
+                android:layout_width="30.0dip"
+                android:layout_height="1.1999817px"
+                android:background="@color/color_net_error" />
+
+            <TextView
+                android:id="@id/tv_float_btn_num_total"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="0.85"
+                android:gravity="center|top"
+                android:text="150841"
+                android:textColor="@color/color_white"
+                android:textSize="8.0dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/linear_float_btn_to_top"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="15.0dip"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_norm_to_top" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

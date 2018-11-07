@@ -2,16 +2,13 @@ package com.zhaobaoge.buy.ui.sort;
 
 
 import android.graphics.Color;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.zhaobaoge.buy.R;
-import com.zhaobaoge.buy.TextFragment;
 import com.zhaobaoge.mvp.view.AppDelegate;
 import com.zhaobaoge.widget.verticaltablayout.VerticalTabLayout;
 import com.zhaobaoge.widget.verticaltablayout.adapter.TabAdapter;
@@ -28,6 +25,8 @@ import java.util.List;
  */
 
 public class SortDelegate extends AppDelegate {
+
+
 
     @Override
     public int getRootLayoutId() {

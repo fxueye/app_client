@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="17.0dip" />
+            <size android:height="34.0dip" android:width="60.0dip" />
+            <solid android:color="@color/thirty_ddq_tag_bac" />
+        </shape>
+    </item>
+</layer-list>

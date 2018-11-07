@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.zhaobaoge.tdd.ui.widget.GoodsListOrderByFilterView android:id="@id/order_view_search_result_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout android:id="@id/swipeToLoadLayout" android:background="@color/color_norm_bac" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/order_view_search_result_list" app:swipe_style="classic"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <include android:id="@id/swipe_refresh_header" layout="@layout/layout_refresh_load_header_gif" />
+        <android.support.v7.widget.RecyclerView android:id="@id/swipe_target" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/shape_norm_title_bac"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include
+            layout="@layout/layout_icon_title_back_left_white"
+            android:layout_width="45.0dip"
+            android:layout_height="fill_parent" />
+
+        <TextView
+            android:id="@id/tv_goods_list_title"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="title"
+            android:textColor="@color/color_white"
+            android:textSize="18.0dip" />
+
+        <LinearLayout
+            android:id="@id/linear_collect_manage"
+            android:layout_width="50.0dip"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@id/tv_collect_manage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="管理"
+                android:textColor="@color/color_white"
+                android:textSize="14.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

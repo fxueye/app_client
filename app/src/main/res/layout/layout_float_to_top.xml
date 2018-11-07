@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@id/linear_float_to_top"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:background="@drawable/shape_norm_float_btn_bac"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="15.0dip"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_norm_to_top" />
+    </LinearLayout>
+</LinearLayout>

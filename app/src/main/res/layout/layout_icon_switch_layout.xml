@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@id/linear_list_gird"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ToggleButton
+            android:id="@id/tbtn_list_gird"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_toggle_switch_layout"
+            android:textOff=""
+            android:textOn="" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="@color/color_norm_ping_theme2" android:endColor="@color/color_norm_ping_theme1" android:angle="180.0" android:centerX="0.6" android:centerY="0.5" />
+    <size android:height="10.0dip" android:width="30.0dip" />
+    <corners android:topLeftRadius="2.0dip" android:topRightRadius="2.0dip" android:bottomLeftRadius="2.0dip" android:bottomRightRadius="2.0dip" />
+    <padding android:left="1.0dip" android:right="1.0dip" />
+</shape>

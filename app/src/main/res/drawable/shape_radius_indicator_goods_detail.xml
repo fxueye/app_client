@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="4.0dip" android:width="40.0dip" />
+    <solid android:color="@color/color_goods_detail_name_lab" />
+    <stroke android:width="1.0dip" android:color="@color/color_goods_detail_name_lab" />
+    <corners android:topLeftRadius="2.0dip" android:topRightRadius="2.0dip" android:bottomLeftRadius="2.0dip" android:bottomRightRadius="2.0dip" />
+</shape>

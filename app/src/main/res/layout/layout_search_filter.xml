@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="right"
+    android:background="@color/color_white"
+    android:gravity="center">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@id/linear_filter_op"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:minWidth="180.0dip"
+            android:orientation="vertical"
+            android:paddingBottom="50.0dip">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40.0dip"
+                android:text="价格区间（元）："
+                android:textColor="@color/color_search_filter_title"
+                android:textSize="13.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.0dip"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@id/edt_filter_price_low"
+                    android:layout_width="80.0dip"
+                    android:layout_height="32.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_search_filter_item_bac_normal"
+                    android:gravity="center"
+                    android:hint="最低价"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="9"
+                    android:paddingBottom="1.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="1.0dip"
+                    android:text=""
+                    android:textColor="@color/color_big_title"
+                    android:textColorHint="@color/color_coupon_after"
+                    android:textCursorDrawable="@null"
+                    android:textSize="12.0sp" />
+
+                <View
+                    android:layout_width="8.0dip"
+                    android:layout_height="1.5dip"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4.0dip"
+                    android:layout_marginRight="4.0dip"
+                    android:background="@color/color_big_title" />
+
+                <EditText
+                    android:id="@id/edt_filter_price_high"
+                    android:layout_width="80.0dip"
+                    android:layout_height="32.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/shape_search_filter_item_bac_normal"
+                    android:gravity="center"
+                    android:hint="最高价"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="9"
+                    android:paddingBottom="1.0dip"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:paddingTop="1.0dip"
+                    android:text=""
+                    android:textColor="@color/color_big_title"
+                    android:textColorHint="@color/color_coupon_after"
+                    android:textCursorDrawable="@null"
+                    android:textSize="12.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30.0dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品来源："
+                    android:textColor="@color/color_search_filter_title"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天猫"
+                    android:textColor="@color/color_new_top_tab_enabled"
+                    android:textSize="10.0dip"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/linear_grid_goods_from_base"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.0dip"
+                android:orientation="vertical">
+
+                <GridView
+                    android:id="@id/grid_filter_goods_from"
+                    android:layout_width="177.0dip"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="80.0dip"
+                    android:horizontalSpacing="16.0dip"
+                    android:numColumns="2"
+                    android:scrollbars="none"
+                    android:verticalSpacing="15.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.0dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品属性："
+                    android:textColor="@color/color_search_filter_title"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="秒杀，海淘"
+                    android:textColor="@color/color_new_top_tab_enabled"
+                    android:textSize="10.0dip"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/linear_grid_goods_property_base"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.0dip"
+                android:orientation="vertical">
+
+                <GridView
+                    android:id="@id/grid_filter_goods_prop"
+                    android:layout_width="177.0dip"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="16.0dip"
+                    android:numColumns="2"
+                    android:scrollbars="none"
+                    android:verticalSpacing="15.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@id/tv_filter_reset"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@color/color_divider_ud"
+            android:gravity="center"
+            android:text="重置"
+            android:textColor="@color/color_big_title" />
+
+        <TextView
+            android:id="@id/tv_filter_set"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@color/color_new_top_tab_enabled"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/color_white" />
+    </LinearLayout>
+</RelativeLayout>
