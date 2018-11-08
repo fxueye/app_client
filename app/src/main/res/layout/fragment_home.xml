@@ -1,16 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_white">
 
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/color_white">
 
+        <android.support.design.widget.AppBarLayout
+            style="@style/Widget.Design.AppBarLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:elevation="0.0dip"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
 
-    <Button
-        android:id="@+id/btnHome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="home"/>
+            <include
+                layout="@layout/layout_title_index_today"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="enterAlways|scroll|snap"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+            <LinearLayout
+                android:id="@id/linear_tab"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:clickable="true"
+                android:orientation="horizontal">
 
-</LinearLayout>
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="40.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@color/color_primary">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <LinearLayout
+                            android:id="@id/linear_tab_pick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="2.0dip"
+                            android:layout_marginTop="2.0dip"
+                            android:background="@color/color_white"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <com.zhaobaoge.widget.tab.PagerSlidingTabStrip
+                                android:id="@id/psts_tabs"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@mipmap/bg_menu_normal"
+                                android:textSize="16sp"
+                                app:pstsDividerColor="#00000000"
+                                app:pstsIndicatorColor="#2DA4F0"
+                                app:pstsIndicatorHeight="2dp"
+                                app:pstsShouldExpand="false"
+                                app:pstsTextAllCaps="false"
+                                app:pstsUnderlineHeight="2dp"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@id/tv_today_chose_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/colorPrimary"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20.0dip"
+                        android:text="@string/index_deploy_chose_category"
+                        android:textColor="@color/color_new_top_tab_disabled"
+                        android:textSize="13.0sp"
+                        android:visibility="gone" />
+
+                    <include
+                        layout="@layout/layout_icon_deploy_line"
+                        android:layout_width="40.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@id/view_cut_line_indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"
+                android:background="@color/color_divider_ud1" />
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/linear_tab"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.zhaobaoge.widget.HackyViewPager
+                android:id="@id/viewpager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:focusableInTouchMode="true" />
+
+            <include
+                layout="@layout/layout_index_modules_recommend_float"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+            <include
+                layout="@layout/layout_home_deploy_popup"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </RelativeLayout>
+
+        <include
+            layout="@layout/layout_status_error_reload"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="48.0dip"
+            android:visibility="gone" />
+
+        <include
+            android:id="@id/float_btn_num"
+            layout="@layout/layout_float_up_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom|center"
+            android:layout_marginBottom="50.0dip"
+            android:layout_marginRight="20.0dip" />
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

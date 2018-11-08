@@ -11,7 +11,7 @@
         android:layout_height="40.0dip"
         android:background="@drawable/shape_norm_float_btn_bac"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <LinearLayout
             android:id="@id/linear_float_btn_num"
@@ -19,7 +19,7 @@
             android:layout_height="fill_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             android:weightSum="2.0">
 
             <TextView
@@ -54,11 +54,12 @@
             android:layout_height="fill_parent"
             android:clickable="true"
             android:gravity="center"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <ImageView
                 android:layout_width="15.0dip"
                 android:layout_height="wrap_content"
+                android:contentDescription="TODO"
                 android:scaleType="centerCrop"
                 android:src="@drawable/icon_norm_to_top" />
         </LinearLayout>

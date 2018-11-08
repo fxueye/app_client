@@ -10,9 +10,6 @@ import com.zhaobaoge.widget.verticaltablayout.widget.TabView;
 import java.util.List;
 
 
-/**
- * Created by chqiu on 2017/1/16.
- */
 
 public class TabFragmentManager {
     private FragmentManager mManager;

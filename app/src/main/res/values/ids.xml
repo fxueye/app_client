@@ -236,4 +236,19 @@
     <item name="linear_web_tv_click" type="id" />
     <item name="tv_web_click_title" type="id" />
     <item name="tv_xbtj_title" type="id" />
+    <item name="linear_tab" type="id" />
+    <item name="tab" type="id" />
+    <item name="linear_tab_pick" type="id" />
+    <item name="tv_tab_pick" type="id" />
+    <item name="tv_today_chose_type" type="id" />
+    <item name="view_cut_line_indicator" type="id" />
+    <item name="drag_float_view_index_ad" type="id" />
+    <item name="linear_float_close" type="id" />
+    <item name="image_float_index_ad" type="id" />
+    <item name="layout_today_pop" type="id" />
+    <item name="scroll_today_pop" type="id" />
+    <item name="view_pop_close" type="id" />
+    <item name="grid_today_deploy_pop" type="id" />
+    <item name="float_btn_num" type="id" />
+    <item name="viewpager" type="id" />
 </resources>
