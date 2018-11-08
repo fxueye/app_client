@@ -1,7 +1,7 @@
-package com.zhaobaoge.widget.verticaltablayout.adapter;
+package com.zhaobaoge.widget.tablayout.adapter;
 
 
-import com.zhaobaoge.widget.verticaltablayout.widget.TabView;
+import com.zhaobaoge.widget.tablayout.tabs.TabView;
 
 public interface TabAdapter {
     int getCount();

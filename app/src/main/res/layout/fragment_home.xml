@@ -40,6 +40,7 @@
                     <RelativeLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent">
+
                         <LinearLayout
                             android:id="@id/linear_tab_pick"
                             android:layout_width="wrap_content"
@@ -50,18 +51,17 @@
                             android:background="@color/color_white"
                             android:gravity="center"
                             android:orientation="horizontal">
-                            <com.zhaobaoge.widget.tab.PagerSlidingTabStrip
-                                android:id="@id/psts_tabs"
+
+                            <com.zhaobaoge.widget.tablayout.HorizontalTabLayout
+                                android:id="@id/tsv_tabs"
                                 android:layout_width="match_parent"
-                                android:layout_height="40dp"
+                                android:layout_height="50dp"
                                 android:background="@mipmap/bg_menu_normal"
                                 android:textSize="16sp"
-                                app:pstsDividerColor="#00000000"
-                                app:pstsIndicatorColor="#2DA4F0"
-                                app:pstsIndicatorHeight="2dp"
-                                app:pstsShouldExpand="false"
-                                app:pstsTextAllCaps="false"
-                                app:pstsUnderlineHeight="2dp"/>
+                                app:ht_indicator_color="@color/color_category_level1_selected"
+                                app:ht_indicator_corners="20dp"
+                                app:ht_indicator_height="2dp"
+                                app:ht_tab_mode="scrollable" />
                         </LinearLayout>
                     </RelativeLayout>
 

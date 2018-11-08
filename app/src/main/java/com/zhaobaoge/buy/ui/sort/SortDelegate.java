@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 import com.zhaobaoge.buy.R;
 import com.zhaobaoge.mvp.view.AppDelegate;
-import com.zhaobaoge.widget.verticaltablayout.VerticalTabLayout;
-import com.zhaobaoge.widget.verticaltablayout.adapter.TabAdapter;
-import com.zhaobaoge.widget.verticaltablayout.widget.TabView;
+import com.zhaobaoge.widget.tablayout.VerticalTabLayout;
+import com.zhaobaoge.widget.tablayout.adapter.TabAdapter;
+import com.zhaobaoge.widget.tablayout.tabs.TabView;
 import com.zhaobaoge.widget.verticalviewpager.DefaultTransformer;
 import com.zhaobaoge.widget.verticalviewpager.VerticalViewPager;
 

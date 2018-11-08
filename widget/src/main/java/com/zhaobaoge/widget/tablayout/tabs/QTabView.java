@@ -1,4 +1,4 @@
-package com.zhaobaoge.widget.verticaltablayout.widget;
+package com.zhaobaoge.widget.tablayout.tabs;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,7 +12,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.zhaobaoge.widget.verticaltablayout.util.DisplayUtil;
+import com.zhaobaoge.widget.tablayout.util.DisplayUtil;
 
 public class QTabView extends TabView {
     private Context mContext;

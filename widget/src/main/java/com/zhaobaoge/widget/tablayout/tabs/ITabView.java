@@ -1,4 +1,4 @@
-package com.zhaobaoge.widget.verticaltablayout.widget;
+package com.zhaobaoge.widget.tablayout.tabs;
 
 import android.view.Gravity;
 import android.view.View;

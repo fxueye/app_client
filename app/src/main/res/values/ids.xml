@@ -83,7 +83,6 @@
     <item name="linear_personal_to_setting" type="id" />
     <item name="linear_personal_favorite" type="id" />
     <item name="viewPager" type="id" />
-    <item name="psts_tabs" type="id" />
     <item name="vp_center" type="id" />
     <item name="vtl_tabs" type="id" />
     <item name="tab_layout_category_level1" type="id" />
@@ -251,4 +250,5 @@
     <item name="grid_today_deploy_pop" type="id" />
     <item name="float_btn_num" type="id" />
     <item name="viewpager" type="id" />
+    <item name="tsv_tabs" type="id" />
 </resources>

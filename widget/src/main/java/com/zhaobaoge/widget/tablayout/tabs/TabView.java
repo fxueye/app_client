@@ -1,4 +1,4 @@
-package com.zhaobaoge.widget.verticaltablayout.widget;
+package com.zhaobaoge.widget.tablayout.tabs;
 
 import android.content.Context;
 import android.widget.Checkable;

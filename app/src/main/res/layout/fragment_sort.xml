@@ -17,7 +17,7 @@
         android:orientation="horizontal"
         android:visibility="visible">
 
-        <com.zhaobaoge.widget.verticaltablayout.VerticalTabLayout
+        <com.zhaobaoge.widget.tablayout.VerticalTabLayout
             android:id="@id/tab_layout_category_level1"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
@@ -25,11 +25,11 @@
             android:background="@color/color_category_level1_bac"
             android:minWidth="80.0dip"
             android:visibility="visible"
-            app:indicator_color="@color/color_category_level1_selected"
-            app:indicator_corners="20dp"
-            app:indicator_gravity="left"
-            app:tab_height="50dp"
-            app:tab_mode="scrollable" />
+            app:vt_indicator_color="@color/color_category_level1_selected"
+            app:vt_indicator_corners="20dp"
+            app:vt_indicator_gravity="left"
+            app:vt_tab_height="50dp"
+            app:vt_tab_mode="scrollable" />
 
         <com.zhaobaoge.widget.verticalviewpager.VerticalViewPager
             android:id="@id/vertical_viewpager_category_level1"

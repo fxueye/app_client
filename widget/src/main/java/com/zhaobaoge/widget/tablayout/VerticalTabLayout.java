@@ -1,4 +1,4 @@
-package com.zhaobaoge.widget.verticaltablayout;
+package com.zhaobaoge.widget.tablayout;
 
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
@@ -20,11 +20,13 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 import com.zhaobaoge.widget.R;
-import com.zhaobaoge.widget.verticaltablayout.adapter.TabAdapter;
-import com.zhaobaoge.widget.verticaltablayout.util.DisplayUtil;
-import com.zhaobaoge.widget.verticaltablayout.util.TabFragmentManager;
-import com.zhaobaoge.widget.verticaltablayout.widget.QTabView;
-import com.zhaobaoge.widget.verticaltablayout.widget.TabView;
+import com.zhaobaoge.widget.tablayout.adapter.TabAdapter;
+import com.zhaobaoge.widget.tablayout.iter.ITabLayout;
+import com.zhaobaoge.widget.tablayout.iter.OnTabSelectedListener;
+import com.zhaobaoge.widget.tablayout.util.DisplayUtil;
+import com.zhaobaoge.widget.tablayout.util.TabFragmentManager;
+import com.zhaobaoge.widget.tablayout.tabs.QTabView;
+import com.zhaobaoge.widget.tablayout.tabs.TabView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +36,7 @@ import static android.support.v4.view.ViewPager.SCROLL_STATE_IDLE;
 import static android.support.v4.view.ViewPager.SCROLL_STATE_SETTLING;
 
 
-public class VerticalTabLayout extends ScrollView {
+public class VerticalTabLayout extends ScrollView implements ITabLayout {
     private Context mContext;
     private TabStrip mTabStrip;
     private int mColorIndicator;
@@ -72,11 +74,10 @@ public class VerticalTabLayout extends ScrollView {
         mContext = context;
         mTabSelectedListeners = new ArrayList<>();
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.VerticalTabLayout);
-        mColorIndicator = typedArray.getColor(R.styleable.VerticalTabLayout_indicator_color,
-                context.getResources().getColor(R.color.colorAccent));
-        mIndicatorWidth = (int) typedArray.getDimension(R.styleable.VerticalTabLayout_indicator_width, DisplayUtil.dp2px(context, 3));
-        mIndicatorCorners = typedArray.getDimension(R.styleable.VerticalTabLayout_indicator_corners, 0);
-        mIndicatorGravity = typedArray.getInteger(R.styleable.VerticalTabLayout_indicator_gravity, Gravity.LEFT);
+        mColorIndicator = typedArray.getColor(R.styleable.VerticalTabLayout_vt_indicator_color, context.getResources().getColor(R.color.colorAccent));
+        mIndicatorWidth = (int) typedArray.getDimension(R.styleable.VerticalTabLayout_vt_indicator_width, DisplayUtil.dp2px(context, 3));
+        mIndicatorCorners = typedArray.getDimension(R.styleable.VerticalTabLayout_vt_indicator_corners, 0);
+        mIndicatorGravity = typedArray.getInteger(R.styleable.VerticalTabLayout_vt_indicator_gravity, Gravity.LEFT);
         if (mIndicatorGravity == 3) {
             mIndicatorGravity = Gravity.LEFT;
         } else if (mIndicatorGravity == 5) {
@@ -84,10 +85,10 @@ public class VerticalTabLayout extends ScrollView {
         } else if (mIndicatorGravity == 119) {
             mIndicatorGravity = Gravity.FILL;
         }
-        mTabMargin = (int) typedArray.getDimension(R.styleable.VerticalTabLayout_tab_margin, 0);
-        mTabMode = typedArray.getInteger(R.styleable.VerticalTabLayout_tab_mode, TAB_MODE_FIXED);
+        mTabMargin = (int) typedArray.getDimension(R.styleable.VerticalTabLayout_vt_tab_margin, 0);
+        mTabMode = typedArray.getInteger(R.styleable.VerticalTabLayout_vt_tab_mode, TAB_MODE_FIXED);
         int defaultTabHeight = LinearLayout.LayoutParams.WRAP_CONTENT;
-        mTabHeight = (int) typedArray.getDimension(R.styleable.VerticalTabLayout_tab_height, defaultTabHeight);
+        mTabHeight = (int) typedArray.getDimension(R.styleable.VerticalTabLayout_vt_tab_height, defaultTabHeight);
         typedArray.recycle();
     }
 
@@ -671,10 +672,5 @@ public class VerticalTabLayout extends ScrollView {
         }
     }
 
-    public interface OnTabSelectedListener {
 
-        void onTabSelected(TabView tab, int position);
-
-        void onTabReselected(TabView tab, int position);
-    }
 }

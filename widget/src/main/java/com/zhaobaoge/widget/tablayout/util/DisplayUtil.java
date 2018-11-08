@@ -1,4 +1,4 @@
-package com.zhaobaoge.widget.verticaltablayout.util;
+package com.zhaobaoge.widget.tablayout.util;
 
 import android.content.Context;
 

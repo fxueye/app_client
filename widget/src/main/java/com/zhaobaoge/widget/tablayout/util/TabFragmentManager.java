@@ -1,11 +1,12 @@
-package com.zhaobaoge.widget.verticaltablayout.util;
+package com.zhaobaoge.widget.tablayout.util;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
-import com.zhaobaoge.widget.verticaltablayout.VerticalTabLayout;
-import com.zhaobaoge.widget.verticaltablayout.widget.TabView;
+import com.zhaobaoge.widget.tablayout.iter.ITabLayout;
+import com.zhaobaoge.widget.tablayout.iter.OnTabSelectedListener;
+import com.zhaobaoge.widget.tablayout.tabs.TabView;
 
 import java.util.List;
 
@@ -15,10 +16,10 @@ public class TabFragmentManager {
     private FragmentManager mManager;
     private int mContainerResid;
     private List<Fragment> mFragments;
-    private VerticalTabLayout mTabLayout;
-    private VerticalTabLayout.OnTabSelectedListener mListener;
+    private ITabLayout mTabLayout;
+    private OnTabSelectedListener mListener;
 
-    public TabFragmentManager(FragmentManager manager, List<Fragment> fragments, VerticalTabLayout tabLayout) {
+    public TabFragmentManager(FragmentManager manager, List<Fragment> fragments, ITabLayout tabLayout) {
         this.mManager = manager;
         this.mFragments = fragments;
         this.mTabLayout = tabLayout;
@@ -26,7 +27,7 @@ public class TabFragmentManager {
         mTabLayout.addOnTabSelectedListener(mListener);
     }
 
-    public TabFragmentManager(FragmentManager manager, int containerResid, List<Fragment> fragments, VerticalTabLayout tabLayout) {
+    public TabFragmentManager(FragmentManager manager, int containerResid, List<Fragment> fragments, ITabLayout tabLayout) {
         this(manager, fragments, tabLayout);
         this.mContainerResid = containerResid;
         changeFragment();
@@ -65,9 +66,7 @@ public class TabFragmentManager {
         mListener = null;
         mTabLayout = null;
     }
-
-
-    private class OnFragmentTabSelectedListener implements VerticalTabLayout.OnTabSelectedListener {
+    private class OnFragmentTabSelectedListener implements OnTabSelectedListener {
 
         @Override
         public void onTabSelected(TabView tab, int position) {
@@ -79,4 +78,6 @@ public class TabFragmentManager {
 
         }
     }
+
+
 }

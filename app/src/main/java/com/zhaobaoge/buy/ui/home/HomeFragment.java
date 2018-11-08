@@ -15,6 +15,7 @@ public class HomeFragment extends FragmentPresenter<HomeDelegate> implements Vie
     protected void bindEvenListener() {
         viewDelegate.setOnClickListener(this, R.id.linear_today_deploy);
     }
+
     @Override
     protected Class<HomeDelegate> getDelegateClass() {
         return HomeDelegate.class;
@@ -22,7 +23,7 @@ public class HomeFragment extends FragmentPresenter<HomeDelegate> implements Vie
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.linear_today_deploy:
 
                 break;
