@@ -55,13 +55,12 @@
                             <com.zhaobaoge.widget.tablayout.HorizontalTabLayout
                                 android:id="@id/tsv_tabs"
                                 android:layout_width="match_parent"
-                                android:layout_height="50dp"
+                                android:layout_height="40dp"
                                 android:background="@mipmap/bg_menu_normal"
                                 android:textSize="16sp"
                                 app:ht_indicator_color="@color/color_category_level1_selected"
-                                app:ht_indicator_corners="20dp"
-                                app:ht_indicator_height="2dp"
-                                app:ht_tab_mode="scrollable" />
+                                app:ht_indicator_corners="1dp"
+                                app:ht_indicator_height="4dp" />
                         </LinearLayout>
                     </RelativeLayout>
 

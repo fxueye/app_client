@@ -530,8 +530,7 @@ public class VerticalTabLayout extends ScrollView implements ITabLayout {
             if (Math.floor(offset) != getChildCount() - 1 && Math.ceil(offset) != 0) {
                 View nextView = getChildAt(index + 1);
                 mIndicatorTopY = childView.getTop() + (nextView.getTop() - childView.getTop()) * (offset - index);
-                mIndicatorBottomY = childView.getBottom() + (nextView.getBottom() -
-                        childView.getBottom()) * (offset - index);
+                mIndicatorBottomY = childView.getBottom() + (nextView.getBottom() - childView.getBottom()) * (offset - index);
             } else {
                 mIndicatorTopY = childView.getTop();
                 mIndicatorBottomY = childView.getBottom();

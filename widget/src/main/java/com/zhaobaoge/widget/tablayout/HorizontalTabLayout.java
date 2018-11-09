@@ -14,42 +14,35 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
-import android.view.Gravity;
 import android.view.View;
+import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 
 import com.zhaobaoge.widget.R;
 import com.zhaobaoge.widget.tablayout.adapter.TabAdapter;
 import com.zhaobaoge.widget.tablayout.iter.ITabLayout;
 import com.zhaobaoge.widget.tablayout.iter.OnTabSelectedListener;
-import com.zhaobaoge.widget.tablayout.util.DisplayUtil;
-import com.zhaobaoge.widget.tablayout.util.TabFragmentManager;
 import com.zhaobaoge.widget.tablayout.tabs.QTabView;
 import com.zhaobaoge.widget.tablayout.tabs.TabView;
+import com.zhaobaoge.widget.tablayout.util.DisplayUtil;
+import com.zhaobaoge.widget.tablayout.util.TabFragmentManager;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 import static android.support.v4.view.ViewPager.SCROLL_STATE_IDLE;
 import static android.support.v4.view.ViewPager.SCROLL_STATE_SETTLING;
 
 
-public class HorizontalTabLayout extends ScrollView implements ITabLayout {
+public class HorizontalTabLayout extends HorizontalScrollView implements ITabLayout {
     private Context mContext;
     private TabStrip mTabStrip;
     private int mColorIndicator;
     private TabView mSelectedTab;
-    private int mTabMargin;
+    private int mTabPadding;
     private int mIndicatorHeight;
-    private int mIndicatorGravity;
     private float mIndicatorCorners;
-    private int mTabMode;
-    private int mTabWidth;
 
-    public static int TAB_MODE_FIXED = 10;
-    public static int TAB_MODE_SCROLLABLE = 11;
 
     private ViewPager mViewPager;
     private PagerAdapter mPagerAdapter;
@@ -77,18 +70,7 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
         mColorIndicator = typedArray.getColor(R.styleable.HorizontalTabLayout_ht_indicator_color, context.getResources().getColor(R.color.colorAccent));
         mIndicatorHeight = (int) typedArray.getDimension(R.styleable.HorizontalTabLayout_ht_indicator_height, DisplayUtil.dp2px(context, 3));
         mIndicatorCorners = typedArray.getDimension(R.styleable.HorizontalTabLayout_ht_indicator_corners, 0);
-        mIndicatorGravity = typedArray.getInteger(R.styleable.HorizontalTabLayout_ht_indicator_gravity, Gravity.LEFT);
-        if (mIndicatorGravity == 3) {
-            mIndicatorGravity = Gravity.LEFT;
-        } else if (mIndicatorGravity == 5) {
-            mIndicatorGravity = Gravity.RIGHT;
-        } else if (mIndicatorGravity == 119) {
-            mIndicatorGravity = Gravity.FILL;
-        }
-        mTabMargin = (int) typedArray.getDimension(R.styleable.HorizontalTabLayout_ht_tab_margin, 0);
-        mTabMode = typedArray.getInteger(R.styleable.HorizontalTabLayout_ht_tab_mode, TAB_MODE_FIXED);
-        int defaultTabWidth = LinearLayout.LayoutParams.WRAP_CONTENT;
-        mTabWidth = (int) typedArray.getDimension(R.styleable.HorizontalTabLayout_ht_tab_width, defaultTabWidth);
+        mTabPadding = (int) typedArray.getDimension(R.styleable.HorizontalTabLayout_ht_tab_padding, 10);
         typedArray.recycle();
     }
 
@@ -122,9 +104,9 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
         return index == -1 ? 0 : index;
     }
 
-    private void addTabWithMode(TabView tabView) {
+    private void addTabView(TabView tabView) {
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
-        initTabWithMode(params);
+        tabView.setPadding(mTabPadding, 0, mTabPadding, 0);
         mTabStrip.addView(tabView, params);
         if (mTabStrip.indexOfChild(tabView) == 0) {
             tabView.setChecked(true);
@@ -141,52 +123,20 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
         }
     }
 
-    private void initTabWithMode(LinearLayout.LayoutParams params) {
-        if (mTabMode == TAB_MODE_FIXED) {
-            params.height = 0;
-            params.weight = 1.0f;
-            params.setMargins(0, 0, 0, 0);
-            setFillViewport(true);
-        } else if (mTabMode == TAB_MODE_SCROLLABLE) {
-            params.height = mTabWidth;
-            params.weight = 0f;
-            params.setMargins(0, mTabMargin, 0, 0);
-            setFillViewport(false);
-        }
-    }
 
     private void scrollToTab(int position) {
         final TabView tabView = getTabAt(position);
-        int y = getScrollY();
-        int tabTop = tabView.getTop() + tabView.getHeight() / 2 - y;
-        int target = getHeight() / 2;
-        if (tabTop > target) {
-            smoothScrollBy(0, tabTop - target);
-        } else if (tabTop < target) {
-            smoothScrollBy(0, tabTop - target);
+        int x = getScrollX();
+        int tabLeft = tabView.getLeft() + tabView.getWidth() / 2 - x;
+        int target = getWidth() / 2;
+        if (tabLeft != target) {
+            smoothScrollBy(tabLeft - target, 0);
         }
-    }
-
-    private float mLastPositionOffset;
-
-    private void scrollByTab(int position, final float positionOffset) {
-        final TabView tabView = getTabAt(position);
-        int y = getScrollY();
-        int tabTop = tabView.getTop() + tabView.getHeight() / 2 - y;
-        int target = getHeight() / 2;
-        int nextScrollY = tabView.getHeight() + mTabMargin;
-        if (positionOffset > 0) {
-            float percent = positionOffset - mLastPositionOffset;
-            if (tabTop > target) {
-                smoothScrollBy(0, (int) (nextScrollY * percent));
-            }
-        }
-        mLastPositionOffset = positionOffset;
     }
 
     public void addTab(TabView tabView) {
         if (tabView != null) {
-            addTabWithMode(tabView);
+            addTabView(tabView);
             tabView.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -212,7 +162,7 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
         });
     }
 
-    private void setTabSelectedImpl(final int position, boolean updataIndicator, boolean callListener) {
+    private void setTabSelectedImpl(final int position, boolean updateIndicator, boolean callListener) {
         TabView view = getTabAt(position);
         boolean selected;
         if (selected = (view != mSelectedTab)) {
@@ -220,7 +170,7 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
                 mSelectedTab.setChecked(false);
             }
             view.setChecked(true);
-            if (updataIndicator) {
+            if (updateIndicator) {
                 mTabStrip.moveIndicatorWithAnimator(position);
             }
             mSelectedTab = view;
@@ -239,105 +189,6 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
             }
         }
     }
-
-
-    public void setTabMode(int mode) {
-        if (mode != TAB_MODE_FIXED && mode != TAB_MODE_SCROLLABLE) {
-            throw new IllegalStateException("only support TAB_MODE_FIXED or TAB_MODE_SCROLLABLE");
-        }
-        if (mode == mTabMode) return;
-        mTabMode = mode;
-        for (int i = 0; i < mTabStrip.getChildCount(); i++) {
-            View view = mTabStrip.getChildAt(i);
-            LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) view.getLayoutParams();
-            initTabWithMode(params);
-            if (i == 0) {
-                params.setMargins(0, 0, 0, 0);
-            }
-            view.setLayoutParams(params);
-        }
-        mTabStrip.invalidate();
-        mTabStrip.post(new Runnable() {
-            @Override
-            public void run() {
-                mTabStrip.updataIndicator();
-            }
-        });
-    }
-
-    /**
-     * only in TAB_MODE_SCROLLABLE mode will be supported
-     *
-     * @param margin margin
-     */
-    public void setTabMargin(int margin) {
-        if (margin == mTabMargin) return;
-        mTabMargin = margin;
-        if (mTabMode == TAB_MODE_FIXED) return;
-        for (int i = 0; i < mTabStrip.getChildCount(); i++) {
-            View view = mTabStrip.getChildAt(i);
-            LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) view.getLayoutParams();
-            params.setMargins(0, i == 0 ? 0 : mTabMargin, 0, 0);
-            view.setLayoutParams(params);
-        }
-        mTabStrip.invalidate();
-        mTabStrip.post(new Runnable() {
-            @Override
-            public void run() {
-                mTabStrip.updataIndicator();
-            }
-        });
-    }
-
-    /**
-     * only in TAB_MODE_SCROLLABLE mode will be supported
-     *
-     * @param width height
-     */
-    public void setTabWidth(int width) {
-        if (width == mTabWidth) return;
-        mTabWidth = width;
-        if (mTabMode == TAB_MODE_FIXED) return;
-        for (int i = 0; i < mTabStrip.getChildCount(); i++) {
-            View view = mTabStrip.getChildAt(i);
-            LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) view.getLayoutParams();
-            params.width = mTabWidth;
-            view.setLayoutParams(params);
-        }
-        mTabStrip.invalidate();
-        mTabStrip.post(new Runnable() {
-            @Override
-            public void run() {
-                mTabStrip.updataIndicator();
-            }
-        });
-    }
-
-    public void setIndicatorColor(int color) {
-        mColorIndicator = color;
-        mTabStrip.invalidate();
-    }
-
-    public void setIndicatorHeight(int height) {
-        mIndicatorHeight = height;
-    }
-
-    public void setIndicatorCorners(int corners) {
-        mIndicatorCorners = corners;
-        mTabStrip.invalidate();
-    }
-
-    /**
-     * @param gravity only support Gravity.LEFT,Gravity.RIGHT,Gravity.FILL
-     */
-    public void setIndicatorGravity(int gravity) {
-        if (gravity == Gravity.LEFT || gravity == Gravity.RIGHT || Gravity.FILL == gravity) {
-            mIndicatorGravity = gravity;
-        } else {
-            throw new IllegalStateException("only support Gravity.LEFT,Gravity.RIGHT,Gravity.FILL");
-        }
-    }
-
 
     public void addOnTabSelectedListener(OnTabSelectedListener listener) {
         if (listener != null) {
@@ -471,7 +322,6 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
     private class TabStrip extends LinearLayout {
         private float mIndicatorLeft;
         private float mIndicatorRight;
-        private int mLastWidth;
         private Paint mIndicatorPaint;
         private RectF mIndicatorRect;
         private AnimatorSet mIndicatorAnimatorSet;
@@ -482,29 +332,23 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
             setOrientation(LinearLayout.HORIZONTAL);
             mIndicatorPaint = new Paint();
             mIndicatorPaint.setAntiAlias(true);
-            mIndicatorGravity = mIndicatorGravity == 0 ? Gravity.LEFT : mIndicatorGravity;
             mIndicatorRect = new RectF();
         }
 
         private void calcIndicatorX(float offset) {
             int index = (int) Math.floor(offset);
             View childView = getChildAt(index);
+            mIndicatorLeft = childView.getLeft();
+            mIndicatorRight = childView.getRight();
             if (Math.floor(offset) != getChildCount() - 1 && Math.ceil(offset) != 0) {
                 View nextView = getChildAt(index + 1);
                 final float nextTabLeft = nextView.getLeft();
                 final float nextTabRight = nextView.getRight();
-
-                mIndicatorLeft = (offset * nextTabLeft + (1f - offset) * mIndicatorLeft);
-                mIndicatorRight = (offset * nextTabRight + (1f - offset) * mIndicatorRight);
-            } else {
-                mIndicatorLeft = childView.getLeft();
-                mIndicatorRight = childView.getRight();
+                mIndicatorLeft = mIndicatorLeft + (nextTabLeft - mIndicatorLeft) * (offset - index);
+                mIndicatorRight = mIndicatorRight + (nextTabRight - mIndicatorRight) * (offset - index);
             }
         }
 
-        protected void updataIndicator() {
-            moveIndicatorWithAnimator(getSelectedTabPosition());
-        }
 
         protected void moveIndicator(float offset) {
             calcIndicatorX(offset);
@@ -519,9 +363,9 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
         protected void moveIndicatorWithAnimator(int index) {
             final int direction = index - getSelectedTabPosition();
             View childView = getChildAt(index);
-            final float targetTop = childView.getTop();
-            final float targetBottom = childView.getBottom();
-            if (mIndicatorLeft == targetTop && mIndicatorRight == targetBottom) return;
+            final float targetLeft = childView.getLeft();
+            final float targetRight = childView.getRight();
+            if (mIndicatorLeft == targetLeft && mIndicatorRight == targetRight) return;
             if (mIndicatorAnimatorSet != null && mIndicatorAnimatorSet.isRunning()) {
                 mIndicatorAnimatorSet.end();
             }
@@ -531,7 +375,7 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
                     ValueAnimator startAnime = null;
                     ValueAnimator endAnime = null;
                     if (direction > 0) {
-                        startAnime = ValueAnimator.ofFloat(mIndicatorRight, targetBottom)
+                        startAnime = ValueAnimator.ofFloat(mIndicatorRight, targetRight)
                                 .setDuration(100);
                         startAnime.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                             @Override
@@ -540,7 +384,7 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
                                 invalidate();
                             }
                         });
-                        endAnime = ValueAnimator.ofFloat(mIndicatorLeft, targetTop).setDuration(100);
+                        endAnime = ValueAnimator.ofFloat(mIndicatorLeft, targetLeft).setDuration(100);
                         endAnime.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                             @Override
                             public void onAnimationUpdate(ValueAnimator animation) {
@@ -549,7 +393,7 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
                             }
                         });
                     } else if (direction < 0) {
-                        startAnime = ValueAnimator.ofFloat(mIndicatorLeft, targetTop).setDuration(100);
+                        startAnime = ValueAnimator.ofFloat(mIndicatorLeft, targetLeft).setDuration(100);
                         startAnime.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                             @Override
                             public void onAnimationUpdate(ValueAnimator animation) {
@@ -557,7 +401,7 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
                                 invalidate();
                             }
                         });
-                        endAnime = ValueAnimator.ofFloat(mIndicatorRight, targetBottom).setDuration(100);
+                        endAnime = ValueAnimator.ofFloat(mIndicatorRight, targetRight).setDuration(100);
                         endAnime.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                             @Override
                             public void onAnimationUpdate(ValueAnimator animation) {
@@ -604,13 +448,11 @@ public class HorizontalTabLayout extends ScrollView implements ITabLayout {
         public void onPageScrollStateChanged(int state) {
             mPreviousScrollState = mScrollState;
             mScrollState = state;
-            mUpdataIndicator = !(mScrollState == SCROLL_STATE_SETTLING
-                    && mPreviousScrollState == SCROLL_STATE_IDLE);
+            mUpdataIndicator = !(mScrollState == SCROLL_STATE_SETTLING && mPreviousScrollState == SCROLL_STATE_IDLE);
         }
 
         @Override
-        public void onPageScrolled(int position, float positionOffset,
-                                   int positionOffsetPixels) {
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
             if (mUpdataIndicator) {
                 mTabStrip.moveIndicator(positionOffset + position);
             }
