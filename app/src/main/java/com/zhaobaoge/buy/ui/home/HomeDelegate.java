@@ -10,7 +10,6 @@ import android.widget.TextView;
 import com.zhaobaoge.buy.R;
 import com.zhaobaoge.mvp.view.AppDelegate;
 import com.zhaobaoge.widget.HackyViewPager;
-import com.zhaobaoge.widget.tab.TabScrollView;
 import com.zhaobaoge.widget.tablayout.HorizontalTabLayout;
 import com.zhaobaoge.widget.tablayout.adapter.TabAdapter;
 import com.zhaobaoge.widget.tablayout.tabs.TabView;
